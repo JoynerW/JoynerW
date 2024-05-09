@@ -1,18 +1,70 @@
-nav {
-    list-style :none;
+
+.container {
+   
     display:flex;
-    flex-direction:row;
-    background-color: black;
-    text-decoration: none;
-    justify-content: center;
-    align-items: center;
-    padding:  0.5rem;
-
-
-
+    flex-direction: column;
+    background-color: rgb(175, 240, 205);
+    
 }
-nav ul li{
-    margin: 1rem;
-    color: white;
-    text-decoration: none;
+
+.container2 {
+   
+    display:flex;
+    flex-direction: column;
+    background-color: rgb(125, 220, 185);
+    
 }
+.container .items {
+    font-size: 2rem;
+    font-weight: bold;
+    width: 100px;
+    height: 100px;
+    background-color: rgb(109, 185, 230);
+}
+
+.pendidikan {
+   
+    display:flex;
+    flex-direction: column;
+    background-color: rgb(145, 210, 205);
+    
+}
+
+.pengalaman {
+   
+    display:flex;
+    flex-direction: column;
+    background-color: rgb(145, 220, 215);
+    
+}
+
+.skill {
+   
+    display:flex;
+    flex-direction: column;
+    background-color: rgb(175, 250, 245);
+    
+}
+.bahasa {
+   
+    display:flex;
+    flex-direction: column;
+    background-color: rgb(145, 220, 215);
+    
+}
+.kontak {
+   
+    display:flex;
+    flex-direction: column;
+    background-color: rgb(125, 200, 200);
+    
+}
+
+img {
+    max-width: 160px;
+    float: left;
+    border: 3px solid;
+    border-radius: 10px;
+    margin-right: 20%;
+}
+
