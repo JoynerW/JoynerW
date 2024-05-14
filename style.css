@@ -1,70 +1,233 @@
-
-.container {
-   
-    display:flex;
-    flex-direction: column;
-    background-color: rgb(175, 240, 205);
-    
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: sans-serif;
 }
-
-.container2 {
-   
-    display:flex;
-    flex-direction: column;
-    background-color: rgb(125, 220, 185);
-    
+.photo{
+    width:60vh;
+    height: 50vh;
 }
-.container .items {
-    font-size: 2rem;
-    font-weight: bold;
-    width: 100px;
-    height: 100px;
-    background-color: rgb(109, 185, 230);
-}
-
-.pendidikan {
-   
+body{
+    background:rgb(109, 141, 173);
     display:flex;
-    flex-direction: column;
-    background-color: rgb(145, 210, 205);
-    
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
-
-.pengalaman {
-   
-    display:flex;
-    flex-direction: column;
-    background-color: rgb(145, 220, 215);
+.container{
+    position:relative;
+    width:100%;
+    max-width: 1000px;
+    min-height: 1000px;
     
+    margin:50px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    box-shadow: 0 35px 55px #adddff;
+
+}
+.container .left{
+    position:relative;
+    background: rgb(60, 86, 112);
+    padding:40px;
 }
 
-.skill {
-   
+
+.profileText{
+    position: relative;
     display:flex;
     flex-direction: column;
-    background-color: rgb(175, 250, 245);
-    
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid white;
+
 }
-.bahasa {
-   
-    display:flex;
-    flex-direction: column;
-    background-color: rgb(145, 220, 215);
-    
+.profileText .profileIMG{
+    position:relative;
+    width:200px;
+    height:200px;
+    border-radius: 50%;
+    overflow: hidden;
 }
-.kontak {
-   
-    display:flex;
-    flex-direction: column;
-    background-color: rgb(125, 200, 200);
-    
+.profileText .profileIMG img{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    object-fit: cover;
+}
+.profileText h2{
+    color: white;
+    font-size: 1.5em;
+    margin-top: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+    line-height: 1.4em;
+
+}
+.profileText h2 span{
+    font-size: 0.7em;
+    font-weight: 300;
+}
+.Info{
+     padding-top:40px;
+}
+.title{
+    color:#fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.4px;
+    margin-bottom: 20px;
+}
+.Info ul{
+    position: relative;
+}
+.Info ul li{
+    position:relative;
+    list-style: none;
+    margin:10px 0;
+    cursor:pointer;
+}
+.Info ul li .icon{
+    display:inline-block;
+    width:30px;
+    font-size: 20px;
+    color:#ffffff;
+}
+.Info ul li span{
+    color:#fff;
+    font-weight: 200;
+}
+.Info.education li{
+    margin-bottom: 15px;
+}
+.Info.education h5{
+    color:rgb(0, 0, 0);
+    font-weight: 500;
+}
+.Info.education h4:nth-child(2){
+    color:white;
+    font-weight: 500;
+}
+.Info.education h4{
+    color: white;
+    font-weight: 300;
+}
+.Info.language.precent{
+    position:relative;
+    width:100%;
+    height:6px;
+    background: white;
+    display: block;
+    margin-top: 5px;
+
+}
+.tittle2{
+    color: white;
+}
+.Info.language.precent div{
+    position:absolute;
+    top:0;
+    left:0;
+    height:100%;
+    background: #ffffff;
+
+}
+.container .right{
+    position:relative;
+    background: #fff;
+    padding:40px;
+}
+.about{
+    margin-bottom: 50px;
+
+}
+.about:last-child{
+    margin-bottom: 0px;
+}
+.title2{
+    color:rgb(255, 255, 255);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+.about .box{
+    display: flex;
+    flex-direction: row;
+    margin:20px 0;
+
+}
+.about .box .text h4{
+    text-transform: uppercase;
+    color:#000000;
+    font-size: 16px;
+
+}
+.skills .box{
+    position:relative;
+    width:100%;
+    display:grid;
+    grid-template-columns: 150px 1fr;
+    justify-content: center;
+    align-items:center;
+}
+.skills.box h4{
+    text-transform: uppercase;
+    color:white;
+    font-weight: 500;
 }
 
-img {
-    max-width: 160px;
-    float: left;
-    border: 3px solid;
-    border-radius: 10px;
-    margin-right: 20%;
+.skills .box .precent{
+    position: relative;
+    width:100%;
+    height:10px;
+    background: #f0f0f0;
+}
+.skills .box .precent div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height:100%;
+    background: #ffffff;
 }
 
+.interest ul{
+    display:grid;
+    grid-template-columns: repeat(4,1fr);
+}
+.interest ul li{
+    list-style: none;
+    color: rgb(0, 0, 0);
+    font-weight: 500;
+    margin:14px 0;
+
+}
+.interest ul li .icon{
+    color: #000000;
+    font-size: 18px;
+    width:35px;
+
+}
+
+@media(max-width:1000px){
+    .container{
+        margin:10px;
+        grid-template-columns: repeat(1,1fr);
+    }
+    .interest ul{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media(max-width:600px){
+    .about .box{
+        flex-direction: column;
+    }
+    .interest ul{
+      grid-template-columns: repeat(1,1fr);
+    }
+    .skills.box{
+        grid-template-columns:repeat(1,1fr) ;
+    }
+}
